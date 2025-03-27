@@ -1,0 +1,133 @@
+#ticketStubBackground {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
+  background-image: url("../assets/images/pattern-ticket.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(15px);
+}
+
+#ticketStubBackground::before {
+  content: "";
+  display: block;
+  padding-top: 46.93%;
+}
+
+#ticketContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+}
+
+#ticketLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5%;
+  width: 71%;
+  position: relative;
+}
+
+#ticketRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19%;
+}
+
+#upperLeft {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#ticketLogo {
+  width: 60%;
+  height: auto;
+  position: relative;
+}
+
+#dateloc {
+  display: block;
+  text-align: left;
+  margin-top: 3%;
+  margin-left: 15%;
+}
+
+#ticketBottomLeft {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+}
+
+#avatarPhoto {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15%;
+  position: relative;
+}
+
+#userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+#ticketNameLine {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+#ticketGitHubLine {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#gitHubIcon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+#ticketNumber {
+  writing-mode: vertical-rl;
+}
+
+.ticket-single-line {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ticket-single-line {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticket-single-line {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,19 @@
+.textGradient {
+  background-image: linear-gradient(
+    to right,
+    hsl(7, 86%, 67%),
+    hsl(0, 0%, 100%)
+  );
+  -webkit-background-clip: text; /* for Safari */
+  background-clip: text;
+  color: transparent;
+}
+
+.ticketStubContainer {
+  margin: 1vh 1vh;
+  width: 90%;
+}
+
+.emailRed {
+  color: hsl(7, 88%, 67%);
+}

@@ -1,0 +1,21 @@
+.labelBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.labelHeader {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.submitButton {
+  margin-top: 25px;
+  width: 100%;
+  height: 3.5rem;
+  background-color: hsl(7, 88%, 67%);
+}
+
+.submitButtonText {
+  color: hsl(248, 70%, 10%);
+}

@@ -1,0 +1,259 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 1);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf")
+    format("truetype-variations");
+  font-weight: 200 800;
+  font-style: normal;
+}
+
+body {
+  font-family: "Inconsolata";
+  margin: 0;
+  display: flex;
+  place-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  height: 100vh; /* Ensure the background covers the entire viewport */
+}
+
+/* Mobile background image */
+@media (max-width: 768px) {
+  body {
+    background-image:
+      url("/src/assets/images/pattern-lines.svg"),
+      url("/src/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+      url("/src/assets/images/pattern-squiggly-line-top.svg"),
+      url("/src/assets/images/background-mobile.png");
+    background-repeat: no-repeat;
+    background-position:
+      center center,
+      bottom left,
+      top right,
+      center center;
+    background-size:
+      auto 100%,
+      50% auto,
+      30% 10%,
+      cover;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+}
+
+/* Tablet background image */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-image:
+      url("/src/assets/images/pattern-lines.svg"),
+      url("/src/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+      url("/src/assets/images/pattern-squiggly-line-top.svg"),
+      url("/src/assets/images/background-tablet.png");
+    background-repeat: no-repeat;
+    background-position:
+      center center,
+      bottom left,
+      top right,
+      center center;
+    background-size:
+      auto 100%,
+      50% auto,
+      30% 20%,
+      cover;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+}
+
+/* Desktop background image */
+@media (min-width: 1025px) {
+  body {
+    background-image:
+      url("/src/assets/images/pattern-lines.svg"),
+      url("/src/assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+      url("/src/assets/images/pattern-squiggly-line-top.svg"),
+      url("/src/assets/images/background-desktop.png");
+    background-repeat: no-repeat;
+    background-position:
+      top center,
+      bottom left,
+      top right,
+      center center;
+    background-size:
+      95% auto,
+      60% auto,
+      25% 50%,
+      cover;
+  }
+  h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+  }
+}
+
+.font-thin {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.text-xs {
+  font-size: 0.75rem; /* 12px if base is 16px */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+}
+
+.text-base {
+  font-size: 1rem; /* 16px */
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* 24px */
+}
+
+.text-3xl {
+  font-size: 1.75rem; /* 24px */
+}
+
+.text-4xl {
+  font-size: 2rem; /* 24px */
+}
+
+.text-opacity-100 {
+  opacity: 1;
+}
+
+.text-opacity-75 {
+  opacity: 0.75;
+}
+
+.text-opacity-50 {
+  opacity: 0.5;
+}
+
+.text-opacity-25 {
+  opacity: 0.25;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.pageContents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.pageMainArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pageLogo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.pageHeader {
+  margin-top: 15vh;
+  width: 75%;
+  max-width: 800px;
+  min-width: 300px;
+}
+
+.pageNotice {
+  width: 50%;
+  max-width: 600px;
+  min-width: 270px;
+  margin-bottom: 5vh;
+}
