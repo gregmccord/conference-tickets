@@ -58,3 +58,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           branch: gh-pages  # Specify the branch to deploy to (gh-pages)
+          folder: build
