@@ -58,4 +58,4 @@ src/
 
 ## Author
 
-I am the sole coder for this project. All visual assets were provided by Frontend Mentor.
+I am the sole coder for this project. CSS stylings are intended to replicate the challenge solution but were created by me. All visual assets were provided by Frontend Mentor.
