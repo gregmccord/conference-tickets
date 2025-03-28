@@ -106,7 +106,7 @@ function HomePage() {
               setFileRejected={setFileRejected}
             />
             {!(imageError || fileRejected) && (
-              <InfoMessage message="Upload your photo (max size: 500KB)." />
+              <InfoMessage message="Upload your photo (max size: 5MB)." />
             )}
             {(imageError || fileRejected) && (
               <ErrorMessage message="Please upload a single valid image with max size: 5MB." />

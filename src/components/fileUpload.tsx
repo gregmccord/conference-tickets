@@ -119,11 +119,12 @@ const styles = {
     // text-align: "center",
     cursor: "pointer",
     transition: "border-color 0.3s ease",
+    display: "flex",
   },
   preview: {
     maxWidth: "100%",
     height: "auto",
-    marginTop: "10px",
+    margin: "0 auto",
   },
 };
 

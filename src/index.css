@@ -30,10 +30,6 @@ a:hover {
   font-style: normal;
 }
 
-html {
-  --vh: 1vh; /* Fallback for browsers that don't support custom properties */
-}
-
 body {
   font-family: "Inconsolata";
   margin: 0;
@@ -44,7 +40,7 @@ body {
   background-size: cover;
   background-position: center center;
   margin: 0;
-  min-height: calc(var(--vh, 1vh) * 100); /* Use custom property for dynamic height */
+  min-height: 100vh;
 }
 
 /* Mobile background image */
@@ -250,7 +246,7 @@ button:focus-visible {
 
 .pageHeader {
   margin-top: 15vh;
-  width: 75%;
+  width: 90%;
   max-width: 800px;
   min-width: 300px;
 }
