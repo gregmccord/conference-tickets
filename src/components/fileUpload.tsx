@@ -11,11 +11,11 @@ interface FileUploadProps {
   setFileRejected: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-// Max file size 500 KiB
-const maxSize = 512000;
+// Max file size 5 MiB
+const maxSize = 5242880;
 
 function fileSizeValidator(file: File) {
-  if (file.size > 512000) {
+  if (file.size > maxSize) {
     return {
       code: "file-size-too-big",
       message: `File is larger than ${maxSize} bytes.`,

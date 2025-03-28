@@ -1,5 +1,8 @@
 .mainForm {
   padding: 2rem;
+  width: 65%;
+  max-width: 750px;
+  min-width: 225px;
 }
 
 .labelBox {
