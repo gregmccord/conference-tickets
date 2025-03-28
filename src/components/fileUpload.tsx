@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { useFormData } from "../hooks/useFormData";
+import heic2any from "heic2any";
 
 interface FileWithPreview extends File {
   preview: string;
@@ -35,20 +36,55 @@ function FileUpload({ setImageError, setFileRejected }: FileUploadProps) {
       "image/*": [".png"]
     },
     validator: fileSizeValidator,
-    onDrop: (acceptedFiles) => {
+    onDrop: async (acceptedFiles) => {
       const file = acceptedFiles[0];
-      setPreviewFile(
-        Object.assign(file, {
-          preview: URL.createObjectURL(file),
-        }),
-      );
-      setFormData({
-        ...formData,
-        image: Object.assign(file, {
-          preview: URL.createObjectURL(file),
-        }),
-      });
-      setImageError(false);
+      try {
+        console.log("Began conversion");
+        if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
+          // Convert HEIC to PNG using heic2any
+          const convertedBlob = await heic2any({
+            blob: file,
+            toType: 'image/png',
+            quality: 0.25
+          }) as Blob;
+  
+          const convertedFile = new File([convertedBlob], file.name.replace(/\.heic$/i, '.png'), {
+            type: 'image/png',
+            lastModified: Date.now()
+          });
+          console.log("Done conversion");
+          const previewUrl = URL.createObjectURL(convertedFile);
+          setPreviewFile(
+            Object.assign(convertedFile, {
+              preview: previewUrl,
+            }),
+          );
+          setFormData({
+            ...formData,
+            image: Object.assign(convertedFile, {
+              preview: previewUrl,
+            }),
+          });
+          console.log("Done upload");
+        } else {
+          const previewUrl = URL.createObjectURL(file);
+          setPreviewFile(
+            Object.assign(file, {
+              preview: previewUrl,
+            }),
+          );
+          setFormData({
+            ...formData,
+            image: Object.assign(file, {
+              preview: previewUrl,
+            }),
+          });
+        }
+        setImageError(false);
+      } catch (error) {
+        console.error("Error during image conversion:", error);
+        setImageError(true);
+      }
     },
   });
 
