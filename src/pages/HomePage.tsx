@@ -46,7 +46,7 @@ function HomePage() {
 
   // Handle GitHub
   const verifyGitHub = (gitHubString: string) => {
-    const gitHubRegex = /^@[a-zA-Z0-9](?!.*--)[a-zA-Z0-9-]{0,37}[a-zA-Z0-9]$/;
+    const gitHubRegex = /^[a-zA-Z0-9](?!.*--)[a-zA-Z0-9-]{0,37}[a-zA-Z0-9]$/;
     return gitHubRegex.test(gitHubString);
   };
   const handleGitHubChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -154,11 +154,11 @@ function HomePage() {
               value={formData.gitHub}
               onBlur={handleGitHubBlur}
               onChange={handleGitHubChange}
-              placeholder="@yourusername"
+              placeholder="yourusername"
               autoComplete="github"
             />
             {gitHubError && (
-              <ErrorMessage message="Must be entered like @username." />
+              <ErrorMessage message="Please enter a valid username." />
             )}
           </div>
           <button type="submit" className="submitButton">

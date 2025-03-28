@@ -37,7 +37,7 @@ function TicketStub({ image, name, gitHub, ticketNumber }: TicketStubProps) {
               <span id="ticketGitHubLine">
                 <img src={gitHubLogo} id="gitHubIcon" />
                 <span id="ticketGitHub" className="text-base font-thin">
-                  {gitHub}
+                  @{gitHub}
                 </span>
               </span>
             </div>
