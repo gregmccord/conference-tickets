@@ -1,11 +1,15 @@
+.mainForm {
+  padding: 2rem;
+}
+
 .labelBox {
   display: flex;
   flex-direction: column;
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 .labelHeader {
-  margin-top: 15px;
   margin-bottom: 5px;
 }
 

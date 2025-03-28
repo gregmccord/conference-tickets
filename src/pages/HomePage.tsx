@@ -98,7 +98,7 @@ function HomePage() {
         <span className="pageNotice text-lg font-thin">
           Secure your spot at next year's biggest coding conference.
         </span>
-        <form onSubmit={handleSubmit}>
+        <form className="mainForm" onSubmit={handleSubmit}>
           <div className="labelBox">
             <label className="labelHeader text-xl">Upload Avatar</label>
             <FileUpload
