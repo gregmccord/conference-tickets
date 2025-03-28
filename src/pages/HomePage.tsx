@@ -106,10 +106,10 @@ function HomePage() {
               setFileRejected={setFileRejected}
             />
             {!(imageError || fileRejected) && (
-              <InfoMessage message="Upload your photo (JPG or PNG, max size: 500KB)." />
+              <InfoMessage message="Upload your photo (max size: 500KB)." />
             )}
             {(imageError || fileRejected) && (
-              <ErrorMessage message="Please upload a single valid image (JPG or PNG, max size: 500KB)." />
+              <ErrorMessage message="Please upload a single valid image with max size: 500KB." />
             )}
           </div>
           <div className="labelBox">
