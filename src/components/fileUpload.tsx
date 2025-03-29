@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { useFormData } from "../hooks/useFormData";
+import uploadIcon from "../assets/images/icon-upload.svg";
 import heic2any from "heic2any";
 
 interface FileWithPreview extends File {
@@ -115,7 +116,10 @@ function FileUpload({ setImageError, setFileRejected }: FileUploadProps) {
           }}
         />
       ) : (
-        <p style={styles.text}>Drag & Drop or Click to upload</p>
+        <div style={styles.upload}>
+          <img src={uploadIcon} style={styles.icon} />
+          <p style={styles.text}>Drag & Drop or Click to upload</p>
+        </div>
       )}
     </div>
   );
@@ -132,6 +136,17 @@ const styles = {
     transition: "border-color 0.3s ease",
     display: "flex",
     backdropFilter: "blur(15px)",
+  },
+  upload: {
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+  },
+  icon: {
+    height: "3rem",
+    width: "3rem",
   },
   preview: {
     maxWidth: "100%",
