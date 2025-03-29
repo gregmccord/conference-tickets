@@ -93,7 +93,7 @@ function HomePage() {
       <img src={codingConf} className="pageLogo" />
       <div className="pageMainArea">
         <h1 className="pageHeader">
-          Your Journey to Coding Conf 2026 Starts Here!
+          Your Journey to Coding Conf 2026 Starts Here! Or does it...
         </h1>
         <span className="pageNotice text-lg font-thin">
           Secure your spot at next year's biggest coding conference.
