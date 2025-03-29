@@ -46,7 +46,7 @@ function HomePage() {
 
   // Handle GitHub
   const verifyGitHub = (gitHubString: string) => {
-    const gitHubRegex = /^@[a-zA-Z0-9](?!.*--)[a-zA-Z0-9-]{0,37}[a-zA-Z0-9]$/;
+    const gitHubRegex = /^[a-zA-Z0-9](?!.*--)[a-zA-Z0-9-]{0,37}[a-zA-Z0-9]$/;
     return gitHubRegex.test(gitHubString);
   };
   const handleGitHubChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,7 +98,7 @@ function HomePage() {
         <span className="pageNotice text-lg font-thin">
           Secure your spot at next year's biggest coding conference.
         </span>
-        <form onSubmit={handleSubmit}>
+        <form className="mainForm" onSubmit={handleSubmit}>
           <div className="labelBox">
             <label className="labelHeader text-xl">Upload Avatar</label>
             <FileUpload
@@ -106,10 +106,10 @@ function HomePage() {
               setFileRejected={setFileRejected}
             />
             {!(imageError || fileRejected) && (
-              <InfoMessage message="Upload your photo (JPG or PNG, max size: 500KB)." />
+              <InfoMessage message="Upload your photo (max size: 5MB)." />
             )}
             {(imageError || fileRejected) && (
-              <ErrorMessage message="Please upload a single valid image (JPG or PNG, max size: 500KB)." />
+              <ErrorMessage message="Please upload a single valid image with max size: 5MB." />
             )}
           </div>
           <div className="labelBox">
@@ -124,6 +124,7 @@ function HomePage() {
               onChange={handleNameChange}
               placeholder=""
               autoComplete="name"
+              className="formBlurBackground"
             />
             {nameError && <ErrorMessage message="Please enter full name." />}
           </div>
@@ -139,6 +140,7 @@ function HomePage() {
               onChange={handleEmailChange}
               placeholder="example@email.com"
               autoComplete="email"
+              className="formBlurBackground"
             />
             {emailError && (
               <ErrorMessage message="Please enter a valid email address." />
@@ -154,15 +156,18 @@ function HomePage() {
               value={formData.gitHub}
               onBlur={handleGitHubBlur}
               onChange={handleGitHubChange}
-              placeholder="@yourusername"
+              placeholder="yourusername"
               autoComplete="github"
+              className="formBlurBackground"
             />
             {gitHubError && (
-              <ErrorMessage message="Must be entered like @username." />
+              <ErrorMessage message="Please enter a valid username." />
             )}
           </div>
           <button type="submit" className="submitButton">
-            <span className="submitButtonText text-xl font-extrabold">Generate My Ticket</span>
+            <span className="submitButtonText text-xl font-extrabold">
+              Generate My Ticket
+            </span>
           </button>
         </form>
       </div>

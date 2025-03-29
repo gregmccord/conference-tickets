@@ -8,10 +8,15 @@ interface InfoMessageProps {
 const InfoMessage: React.FC<InfoMessageProps> = ({ message }) => {
   return (
     <span>
-      <img src={infoLogo} className="info" alt="info error" />
+      <img style={styles} src={infoLogo} className="info" alt="info error" />
       {message}
     </span>
   );
+};
+
+const styles = {
+  paddingRight: "5px",
+  transform: "translateY(15%)",
 };
 
 export default InfoMessage;
