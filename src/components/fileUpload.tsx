@@ -33,7 +33,10 @@ function FileUpload({ setImageError, setFileRejected }: FileUploadProps) {
   const { fileRejections, getRootProps, getInputProps } = useDropzone({
     maxFiles: 1,
     accept: {
-      "image/*": [".png"],
+      "image/png": [".png"],
+      "image/jpg": [".jpg"],
+      "image/jpeg": [".jpeg"],
+      "image/heic": [".heic"],
     },
     validator: fileSizeValidator,
     onDrop: async (acceptedFiles) => {
