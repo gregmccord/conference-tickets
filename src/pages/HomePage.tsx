@@ -124,6 +124,7 @@ function HomePage() {
               onChange={handleNameChange}
               placeholder=""
               autoComplete="name"
+              className="formBlurBackground"
             />
             {nameError && <ErrorMessage message="Please enter full name." />}
           </div>
@@ -139,6 +140,7 @@ function HomePage() {
               onChange={handleEmailChange}
               placeholder="example@email.com"
               autoComplete="email"
+              className="formBlurBackground"
             />
             {emailError && (
               <ErrorMessage message="Please enter a valid email address." />
@@ -156,6 +158,7 @@ function HomePage() {
               onChange={handleGitHubChange}
               placeholder="yourusername"
               autoComplete="github"
+              className="formBlurBackground"
             />
             {gitHubError && (
               <ErrorMessage message="Please enter a valid username." />

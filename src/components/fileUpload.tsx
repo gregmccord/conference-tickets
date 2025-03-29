@@ -105,7 +105,7 @@ function FileUpload({ setImageError, setFileRejected }: FileUploadProps) {
           }}
         />
       ) : (
-        <p>Drag & Drop or Click to upload</p>
+        <p style={styles.text}>Drag & Drop or Click to upload</p>
       )}
     </div>
   );
@@ -113,19 +113,25 @@ function FileUpload({ setImageError, setFileRejected }: FileUploadProps) {
 
 const styles = {
   dropzone: {
-    border: "1px dashed #ccc",
+    backgroundImage: "linear-gradient( 45deg, rgba(255, 255, 255, 0.1) 100%, rgba(255, 255, 255, 0.3) 0%), url(\"data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23cccccc' stroke-width='1.5' stroke-dasharray='10%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e\")",
+    strokeDasharray: "4px",
     borderRadius: "8px",
     padding: "20px",
-    // text-align: "center",
     cursor: "pointer",
     transition: "border-color 0.3s ease",
     display: "flex",
+    backdropFilter: "blur(15px)"
   },
   preview: {
     maxWidth: "100%",
     height: "auto",
     margin: "0 auto",
   },
+  text: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    color: "#a9a9a9",
+  }
 };
 
 export default FileUpload;
