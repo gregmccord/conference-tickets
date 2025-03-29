@@ -15,7 +15,7 @@ This is a solution to the [Conference ticket generator challenge on Frontend Men
 
 ### Process
 
-I used Vite to set up this React project. react-dropzone is used to handle file uploads.
+I used Vite to set up this React project. react-dropzone is used to handle file uploads and heic2any to handle accepting iPhone photos.
 
 ### Sample View
 
