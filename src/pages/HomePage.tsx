@@ -165,7 +165,9 @@ function HomePage() {
             )}
           </div>
           <button type="submit" className="submitButton">
-            <span className="submitButtonText text-xl font-extrabold">Generate My Ticket</span>
+            <span className="submitButtonText text-xl font-extrabold">
+              Generate My Ticket
+            </span>
           </button>
         </form>
       </div>

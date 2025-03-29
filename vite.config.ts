@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/conference-tickets/' // Use your repo name here
-})
+  base: "/conference-tickets/", // Use your repo name here
+});

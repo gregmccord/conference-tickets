@@ -28,6 +28,7 @@ TODO: have comparisons of both pages
 ### Running Locally
 
 When running locally via npm,
+
 - To start the server, execute 'npm run dev' (launches on port 5173 by default)
 - For file formatting, execute 'npm run format'
 - If you'd like a stock image to test with, feel free to use this one provided by Frontend Mentor
@@ -46,15 +47,15 @@ When running locally via npm,
 ### Maintain proper code structure
 
 src/
-  assets/         # Images, fonts, and other static files
-  components/     # Reusable UI components
-  contexts/       # Components with state and logic, often connected to data
-  pages/          # Top-level components representing different application routes
-  services/       # API calls and data fetching logic
-  utils/          # Helper functions and utilities
-  styles/         # Global styles or CSS modules
-  app.jsx         # Root component and application setup
-  index.js        # Entry point of the application
+assets/ # Images, fonts, and other static files
+components/ # Reusable UI components
+contexts/ # Components with state and logic, often connected to data
+pages/ # Top-level components representing different application routes
+services/ # API calls and data fetching logic
+utils/ # Helper functions and utilities
+styles/ # Global styles or CSS modules
+app.jsx # Root component and application setup
+index.js # Entry point of the application
 
 ## Author
 

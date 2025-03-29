@@ -8,7 +8,7 @@ interface InfoMessageProps {
 const InfoMessage: React.FC<InfoMessageProps> = ({ message }) => {
   return (
     <span>
-      <img style={styles} src={infoLogo} className="info" alt="info error"/>
+      <img style={styles} src={infoLogo} className="info" alt="info error" />
       {message}
     </span>
   );
